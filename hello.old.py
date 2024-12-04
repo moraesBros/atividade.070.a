@@ -73,13 +73,12 @@ def send_email(to, subject, template, **kwargs):
 
 def send_simple_message():
   	return requests.post(
-  		"https://api.mailgun.net/v3/sandboxac1a400f6f814141b8b87a5c3d287cc5.mailgun.org/messages",
+  		"https://api.mailgun.net/v3/sandboxb45ac857f9034498aa07f852b59b9508.mailgun.org/messages",
   		auth=("api", "YOUR_API_KEY"),
-  		data={"from": "Excited User <mailgun@sandboxac1a400f6f814141b8b87a5c3d287cc5.mailgun.org>",
-  			"to": ["bar@example.com", "YOU@sandboxac1a400f6f814141b8b87a5c3d287cc5.mailgun.org"],
+  		data={"from": "Excited User <mailgun@sandboxb45ac857f9034498aa07f852b59b9508.mailgun.org>",
+  			"to": ["bar@example.com", "YOU@sandboxb45ac857f9034498aa07f852b59b9508.mailgun.org"],
   			"subject": "Hello",
   			"text": "Testing some Mailgun awesomeness!"})
-
 
 class NameForm(FlaskForm):
     name = StringField('What is your name?', validators=[DataRequired()])
